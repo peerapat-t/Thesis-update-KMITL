@@ -1,0 +1,15 @@
+ขออภัยครับพี่ พอดีไปแก้โมเดลมา เลยอาจจะส่งให้ช้านิดนึง
+
+ขอสรุปประเด็นที่ผมถามพี่ไว้
+
+- SGD MF/WMF ผมไม่แน่ใจว่าผม derive ถูกรึเปล่า (อ้างอิงจากเปเปอร์ Hu2008)
+พี่ลองดูใน cf_model.py จะมี 2 จุดที่ผมไม่แน่ใจว่าถูกไหม คือ
+(1) SGD MF update only observed value
+(2) SGD WMF update every observation with different confidence (weight) level
+อยากให้พี่ลองตรวจ function 2 อันนี้ครับ
+sgd_mf (Stochastic gradient descent matrix factorization)
+sgd_wmf (stochastic gradient descent weighted matrix factorization)
+
+ถ้าถูก ผมว่าเราอาจจะมาถูกทางแล้ว ผมลองพัฒนาต่อไปเป็น sgd_mwmf (stochastic gradient descent mean weighted matrix factorization) แล้วทำให้ MAP@K ดีขึ้น (ลองดู train-test-split notebook ผมมีรันผลทิ้งไว้) แสดงว่า financial indicator improve accuracy ได้
+
+
